@@ -1,0 +1,6 @@
+{  	"usuario": "isaac", 
+    "ruta": ["obtenerSalario", "isaac"],  
+    "jefes": {    
+    	"carlos": ["isaac","pepe"]
+        }
+}
