@@ -1,0 +1,138 @@
+threagile_version: 1.0.0
+
+title: Modelado de amenazas ULSA
+
+date: 2023-09-20
+
+author:
+  name: Isaac
+  homepage: www.example.com
+
+
+management_summary_comment: >
+  Resumen <b>algo</b> solo por llenar texto...
+
+business_criticality: important # values: archive, operational, important, critical, mission-critical
+
+
+business_overview:
+  description: Resumen del contexto del negocio <i>texto x</i> imagenes..
+  images:
+#    - custom-image-1.png: Some dummy image 1
+#    - custom-image-2.png: Some dummy image 2
+
+
+technical_overview:
+  description: Resumen del contexto técnico <i>texto x</i> imagenes..
+  images:
+#    - custom-image-1.png: Some dummy image 1
+#    - custom-image-2.png: Some dummy image 2
+
+
+
+questions: # simply use "" as answer to signal "unanswered"
+  Some question without an answer?: ""
+  Some question with an answer?: >
+    Some answer
+
+
+
+abuse_cases:
+  Some Abuse Case: >
+    Some Description
+
+
+security_requirements:
+  Some Security Requirement: Some Description
+
+
+
+# Tags can be used for anything, it's just a tag. Also risk rules can act based on tags if you like.
+# Tags can be used for example to name the products used (which is more concrete than the technology types that only specify the type)
+tags_available:
+  - aws
+  - aws:apigateway
+  - aws:dynamodb
+  - aws:ebs
+  - aws:ec2
+  - aws:iam
+  - aws:lambda
+  - aws:rds
+  - aws:s3
+  - aws:sqs
+  - aws:vpc
+  - azure
+  - docker
+  - gcp
+  - git
+  - kubernetes
+  - nexus
+  - ocp
+  - openshift
+  - tomcat
+  - some-tag
+  - some-other-tag
+
+
+
+
+data_assets:
+
+  Activo de datos:
+    id: info-maestria
+    description: Este activo hacwe referencia a que treemos información personal de lso alumnos
+    usage: business # values: business, devops
+    tags:
+    origin: Alumnos
+    owner: ULSA
+    quantity: many # values: very-few, few, many, very-many
+    confidentiality: confidential # values: public, internal, restricted, confidential, strictly-confidential
+    integrity: critical # values: archive, operational, important, critical, mission-critical
+    availability: operational # values: archive, operational, important, critical, mission-critical
+    justification_cia_rating: Basado en la polílica de la organización
+
+
+
+technical_assets:
+
+  Activo mi portal:
+    id: mi-portal-web
+    description: Portal de ULSA
+    type: process # values: external-entity, process, datastore
+    usage: business # values: business, devops
+    used_as_client_by_human: false
+    out_of_scope: false
+    justification_out_of_scope:
+    size: application # values: system, service, application, component
+    technology: web-application # values: see help
+    tags:
+    internet: true
+    machine: container # values: physical, virtual, container, serverless
+    encryption: none # values: none, transparent, data-with-symmetric-shared-key, data-with-asymmetric-shared-key, data-with-enduser-individual-key
+    owner: ULSA
+    confidentiality: confidential # values: public, internal, restricted, confidential, strictly-confidential
+    integrity: critical # values: archive, operational, important, critical, mission-critical
+    availability: critical # values: archive, operational, important, critical, mission-critical
+    justification_cia_rating: Some Justification
+    multi_tenant: false
+    redundant: false
+    custom_developed_parts: true
+    data_assets_processed: # sequence of IDs to reference
+      - info-maestria
+    data_assets_stored: 
+      - info-maestria # sequence of IDs to reference
+    data_formats_accepted: # sequence of formats like: json, xml, serialization, file, csv
+      - xml
+    
+
+trust_boundaries:
+
+  Red Portal:
+    id: red-portal
+    description: Aqui vive nuestro Web Server
+    type: network-cloud-security-group # values: see help
+    tags:
+    technical_assets_inside: # sequence of IDs to reference
+      - mi-portal-web
+    trust_boundaries_nested: # sequence of IDs to reference
+
