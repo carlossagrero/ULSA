@@ -1,0 +1,4 @@
+Ejecutar en un contenedor Threagile
+
+docker run --rm -it -v "$(pwd)":/app/work threagile/threagile -verbose 
+-model /app/work/modelo.yaml -output /app/work
