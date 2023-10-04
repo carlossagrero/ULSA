@@ -1,0 +1,215 @@
+# Copyright (c) 2017-2020 VMware, Inc. All Rights Reserved.
+# SPDX-License-Identifier: BSD-2-Clause
+#
+# general commands to be invoked when retrieving package information
+# Key-Value substitutions:
+# package: the package name
+# image: the image name that the tool uses
+# tag: the image tag name that the tool uses
+apt-get:
+  install:
+    - 'install' # subcommand to install
+  remove:
+    - 'purge' # subcommand to remove a package
+  ignore: # list of subcommands that don't add or remove packages
+    - 'update'
+  packages: 'dpkg' # refer to base.yml's method of collection
+
+apt:
+  install:
+    - 'install' # subcommand to install
+  remove:
+    - 'purge' # subcommand to remove a package
+  ignore: # list of subcommands that don't add or remove packages
+    - 'update'
+  packages: 'dpkg' # refer to base.yml's method of collection
+
+tyum:
+  install:
+    - 'install'
+  remove:
+    - 'remove'
+  ignore:
+    - 'check-update'
+    - 'clean'
+  packages: 'tdnf'
+
+tdnf:
+  install:
+    - 'install'
+  remove:
+    - 'remove'
+  ignore:
+    - 'check-update'
+    - 'clean'
+  packages: 'tdnf'
+
+apk:
+  install:
+    - 'add'
+  remove:
+    - 'del'
+  packages: 'apk'
+
+pacman:
+  install:
+    - '-Syu'
+  remove:
+    - '-Rcs'
+  packages: 'pacman'
+
+yum:
+  install:
+    - 'install'
+  remove:
+    - 'remove'
+  ignore:
+    - 'check-update'
+    - 'clean'
+  packages: 'rpm'
+
+dnf:
+  install:
+    - 'install'
+  remove:
+    - 'remove'
+  ignore:
+    - 'check-update'
+    - 'clean'
+  packages: 'rpm'
+
+rpm:
+  install:
+    - '-i'
+    - '-U'
+  remove:
+    - '-e'
+  packages: 'rpm'
+
+pip:
+  install:
+    - 'install'
+  remove:
+    - 'uninstall'
+  ignore:
+    - 'freeze'
+    - 'list'
+    - 'download'
+    - 'show'
+    - 'check'
+    - 'config'
+    - 'hash'
+    - 'wheel'
+  packages: 'pip'
+
+pip3:
+  install:
+    - 'install'
+  remove:
+    - 'uninstall'
+  ignore:
+    - 'freeze'
+    - 'list'
+    - 'download'
+    - 'show'
+    - 'check'
+    - 'config'
+    - 'hash'
+    - 'wheel'
+  packages: 'pip3'
+
+python3:
+  install:
+    - 'install'
+  remove:
+    - 'uninstall'
+  ignore:
+    - 'freeze'
+    - 'list'
+    - 'download'
+    - 'show'
+    - 'check'
+    - 'config'
+    - 'hash'
+    - 'wheel'
+  packages: 'pip3'
+
+gem:
+  install:
+    - 'install'
+  remove:
+    - 'uninstall'
+  ignore:
+    - 'fetch'
+    - 'build'
+    - 'lock'
+    - 'unpack'
+    - 'cleanup'
+    - 'check'
+    - 'mirror'
+  packages: 'gem'
+
+bundle:
+  install:
+    - 'install'
+  remove:
+    - 'remove'
+  ignore:
+    - 'update'
+    - 'config'
+    - 'add'
+    - 'init'
+    - 'package'
+    - 'exec'
+  packages: 'gem'
+
+npm:
+  install:
+    - 'install'
+  remove:
+    - 'uninstall'
+  ignore:
+    - 'ping'
+  packages: 'npm'
+
+yarn:
+  install:
+    - 'install'
+  remove:
+    - 'uninstall'
+  ignore:
+    - 'publish'
+    - 'add'
+    - 'remove'
+  packages: 'npm'
+
+zypper:
+  install:
+    - 'in'
+    - 'install'
+  remove:
+    - 'rm'
+    - 'remove'
+  ignore:
+    - 'clean'
+  packages: 'rpm'
+
+microdnf:
+  install:
+    - 'install'
+  remove:
+    - 'remove'
+  ignore:
+    - 'check-update'
+    - 'clean'
+  packages: 'rpm'
+
+go:
+  install:
+    - 'build'
+    - 'mod'
+  remove:
+    - 'remove'
+  ignore:
+    - 'clean'
+  packages: 'go'
