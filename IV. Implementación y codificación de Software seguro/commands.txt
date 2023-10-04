@@ -1,0 +1,10 @@
+  Ejecutar cdxgen
+
+  docker run --rm -v /tmp:/tmp -v $(pwd):/app:rw -t ghcr.io/cyclonedx/cdxgen -r /app -o /app/bom.json
+
+
+  Ejecutar tren (para imagenes de ocntenedores)
+
+  git clone https://github.com/tern-tools/tern.git 
+  docker build -f docker/Dockerfile -t ternd .
+  docker run --rm ternd report -i debian:buster

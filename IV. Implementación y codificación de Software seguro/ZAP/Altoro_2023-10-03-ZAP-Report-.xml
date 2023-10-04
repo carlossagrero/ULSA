@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<OWASPZAPReport programName="OWASP ZAP" version="2.13.0" generated="mar., 3 oct. 2023 16:38:33">
+	
+		<site name="http://altoromutual.com:8080" host="altoromutual.com" port="8080" ssl="false">
+			<alerts>
+				
+					<alertitem>
+						<pluginid>40026</pluginid>
+						<alertRef>40026</alertRef>
+						<alert>Sitio cruzado de Scripting (Basado en DOM)</alert>
+						<name>Sitio cruzado de Scripting (Basado en DOM)</name>
+						<riskcode>3</riskcode>
+						<confidence>3</confidence>
+						<riskdesc>Alto (Alta)</riskdesc>
+						<confidencedesc>Alta</confidencedesc>
+						<desc>&lt;p&gt;Cross_site Scripting (XSS) es una t&#xe9;cnica de ataque que comprende hacer eco del c&#xf3;digo que fue proporcionado por el atacante en la instancia del navegador de un usuario. Una instancia de navegador puede ser un cliente de navegador web corriente, o un objeto de navegador integrado e un producto de software, como el navegador que se encuentra dentro de WinAmp, un lector de RSS o un cliente de correos electr&#xf3;nicos. El c&#xf3;digo por s&#xed; mismo se encuentra escrito en HTML/JavaScript, pero tambi&#xe9;n puede extenderse a VBScript, ActiveX, Jave, Flash o cualquier otra tecnolog&#xed;a que sea compatible con el navegador.&lt;/p&gt;&lt;p&gt;Cuando un atacante consigue el navegador de un usuario para poder ejecutar su c&#xf3;digo, el c&#xf3;digo se ejecutar&#xe1; dentro del contexto de seguridad (o zona) del sitio web de hospedaje. Con este nivel de privilegio, el c&#xf3;digo tiene la extensi&#xf3;n de leer, modificar y transmitir cualquier dato que sea sensible al que pueda ingresar al navegador. Un usuario de Cross-Site Scripted puede ser que tenga su cuenta secuetrada (robo de cookies), su navegador redirigido a otra ubicaci&#xf3;n, posiblemente mostrando contenido ilegal entregado por el sitio web que est&#xe1;n visitando. Los ataques de scripting entre los sitios relativamente comprometen la relaci&#xf3;n de la confianza entre el usuario y el sitio web. Las aplicaciones que usan instancias de objetos del navegador que suben contenido desde el sistema de archivos puede activar el c&#xf3;digo bajo la zona de lam m&#xe1;quina, lo cual permite que el sistema se vea comprometido.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Hay tres tipos de ataques diferentes de scripting entre los sitios: no persistentes, persistentes y basados en DOM.&lt;/p&gt;&lt;p&gt;Los ataques que no son persistentes y los basados en DOM necesitan que el usuario visite un enlace que fue dise&#xf1;ado con c&#xf3;digo maliciosos o visite alguna p&#xe1;gina web maliciosa que incluya un formulario web que, cuando se publique en el sitio que es vulnerable, originar&#xe1; el ataque. El uso de un formulario que es malicioso normalmente tendr&#xe1; lugarcuando el recurso que es vulnerable solo acepte las solicitudes HTTP POST. En tal caso, el formulario puede se enviado de forma autom&#xe1;tica, sin el conocimiento de la v&#xed;ctima (por ejemplo, por medio de JavaScript). Al hacer clic en el enlace que es malicioso o al enviar el formulario malicioso, la carga que es &#xfa;til de CSS recibir&#xe1; eco y ser&#xe1; interpretada por el navegador del usuario y se activar&#xe1;. Otra t&#xe9;cnica para poder prevenir solicitudes casi arbitrarias (GET y POST) es por medio del uso de un cliente integrado, como adobe Flash.&lt;/p&gt;&lt;p&gt;Los ataques continuos se originan cuando el c&#xf3;digo que es malicioso se env&#xed;a a un sitio web donde se almacena durante un per&#xed;odo de tiempo. Algunos ejemplos de los objetivos preferidos de los atacantes incluyen mensajes en carteleras de anuncios, mensajes de correo electr&#xf3;nico y programas de chat. El usuario desprevenido no tendr&#xe1; que interactuar con ning&#xfa;n sitio/enlace adicional (por ejemplo, un sitio o link malicioso enviado por correo electr&#xf3;nico), solamente bastar&#xe1; con abrir la p&#xe1;gina web que contiene el c&#xf3;digo.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://altoromutual.com:8080#jaVasCript:/*-/*`/*\`/*&apos;/*&quot;/**/(/* */oNcliCk=alert(5397) )//%0D%0A%0d%0a//&lt;/stYle/&lt;/titLe/&lt;/teXtarEa/&lt;/scRipt/--!&gt;\x3csVg/&lt;sVg/oNloAd=alert(5397)//&gt;\x3e</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>#jaVasCript:/*-/*`/*\`/*&apos;/*&quot;/**/(/* */oNcliCk=alert(5397) )//%0D%0A%0d%0a//&lt;/stYle/&lt;/titLe/&lt;/teXtarEa/&lt;/scRipt/--!&gt;\x3csVg/&lt;sVg/oNloAd=alert(5397)//&gt;\x3e</attack>
+									<evidence></evidence>
+									<otherinfo>Tag name: input Att name:  Att id: </otherinfo>
+								</instance>
+							
+							
+								<instance>
+									<uri>http://altoromutual.com:8080/#jaVasCript:/*-/*`/*\`/*&apos;/*&quot;/**/(/* */oNcliCk=alert(5397) )//%0D%0A%0d%0a//&lt;/stYle/&lt;/titLe/&lt;/teXtarEa/&lt;/scRipt/--!&gt;\x3csVg/&lt;sVg/oNloAd=alert(5397)//&gt;\x3e</uri>
+									<method>GET</method>
+									<param></param>
+									<attack>#jaVasCript:/*-/*`/*\`/*&apos;/*&quot;/**/(/* */oNcliCk=alert(5397) )//%0D%0A%0d%0a//&lt;/stYle/&lt;/titLe/&lt;/teXtarEa/&lt;/scRipt/--!&gt;\x3csVg/&lt;sVg/oNloAd=alert(5397)//&gt;\x3e</attack>
+									<evidence></evidence>
+									<otherinfo>Tag name: input Att name:  Att id: </otherinfo>
+								</instance>
+							
+						</instances>
+						<count>2</count>
+						<solution>&lt;p&gt;Fase: Arquitectura y Dise&#xf1;o&lt;/p&gt;&lt;p&gt;Utilizar una biblioteca o framework verificado y confiable que evite esta vulnerabilidad o proporcione elementos que faciliten evitarla.&lt;/p&gt;&lt;p&gt;Los ejemplos de las bibliotecas y marcos que facilitan el origen de resultados que son codificados de forma correcta incluyen la biblioteca Anti-XSS de Microsoft, el m&#xf3;dulo de codificaci&#xf3;n OWASP ESAPI y Apache Wicket.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Fases: Implementaci&#xf3;n; Arquitectura y Dise&#xf1;o&lt;/p&gt;&lt;p&gt;Comprenda el contexto en el que se va a utilizar sus datos y la condificaci&#xf3;n que se va a esperar. Esto es fundamentalmente importante cuando se transmiten los datos entre diferentes componentes o cuando se generan las salidas que pueden comprender m&#xfa;ltiples codificaciones al mismo tiempo, como paginas web o mensajes de correos de varias zonas. Estudie todos los protocolos de comunicac&#xf3;n y representaciones de los datos que son esperadas para poder determinar las estrategias de codificaci&#xf3;n que son necesarias.&lt;/p&gt;&lt;p&gt;Por cualquier dato que se enviar&#xe1; a otra p&#xe1;gina web, en especial cualquier dato recibido de las entradas externas, utiice la codificaci&#xf3;n que sea conveniente en todos los caracteres que no sean alfanum&#xe9;ricos.&lt;/p&gt;&lt;p&gt;Consulte la hoja de referencia de prevenci&#xf3;n de CSS para poder obtener m&#xe1;s informaci&#xf3;n detallada de los diferentes tipos de condificaci&#xf3;n y escape que se requieren.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Fase: Arquitectura y Dise&#xf1;o&lt;/p&gt;&lt;p&gt;Cualquier comprobaci&#xf3;n de seguridad que se vaya a realizar en el lado del cliente, aseg&#xfa;rese de que estas comprobaciones se encuentre duplicadas en el lado del servidor, para evitar el CWE-602. Los atacantes pueden eludir las comprobaciones del lado del cliente modificando los valores despu&#xe9;s de que se hayan realizado las comprobaciones, o cambiando al cliente para poder eliminar de forma completa las comprobaciones del lado del cliente. Despu&#xe9;s, estos valores que fueron modificados ser&#xe1;n enviados al servidor.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Si se encuentra disponible, utilice los mecanismos estructurados que apliquen de forma autom&#xe1;tica la separaci&#xf3;n entre los datos y c&#xf3;digos. Estos mecanismos pueden otorgar la cotizaci&#xf3;n, codificaci&#xf3;n y validaci&#xf3;n relevantes de manera autom&#xe1;tica, en lugar de confiar en que el desarrollador proporcione esta capacidad en cada uno de los puntos donde se origina la salida.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Fase: Implementaci&#xf3;n&lt;/p&gt;&lt;p&gt;Para cada una de las p&#xe1;ginas web que se origina, utilice y especifique una codificaci&#xf3;n de caracteres como ISO-8859 o UTF-8. Cuando no se puede especificar una condificaci&#xf3;n, el navegador web podr&#xed;a selaccionar una codificaci&#xf3;n distinta adivinando que codificiaci&#xf3;n est&#xe1; siendo utilizada en verdad por la p&#xe1;gina web. Esto puede permitir que el navegador web trate varias secuencias como especiales, abriendo al cliente a leves ataques XSS. Consulte CWE-116 para conseguir m&#xe1;s mitigaciones con respecto a la codificaci&#xf3;n/escape.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Para ayudar a mitigar los ataques XSS contra las cookies de la sesi&#xf3;n del usuario, es necesario establecer que la cookie de la sesi&#xf3;n sea HttpOnly. En navegadores que son compatibles con la caracter&#xed;stica HttpOnly (como las versiones m&#xe1;s actualizadas de internet explorer y firefox), esta caracter&#xed;stica puede prevenir que la cookie de sesi&#xf3;n del usuario sea accesible para las secuencias de comandos del lado del cliente malignas que utilizan document.cookie. Esta no es una soluci&#xf3;n muy completa, ya que HttpOnly no es compatible con todos los navegadores que hay. M&#xe1;s importante a&#xfa;n, XMLHTTPRequest y otras tecnolog&#xed;as poderosas de navegador otorgan acceso de lectura a los encabezados HTTP, incluido el encabezado Set-Cookie en el cual se establece el indicador HttpOnly.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Asuma que toda la entrada es maliciosa. Utilizar una estrategia de validaci&#xf3;n de entradas de tipo &quot;aceptar lo bueno conocido&quot;, es decir, utilizar una lista de entradas aceptables que se ajusten estrictamente a las especificaciones. Rechace cualquier entrada que no se adapte de forma estricta a las especificaciones, o cambielas por algo que s&#xed; lo haga. No conf&#xed;e exclusivamente en la b&#xfa;squeda de entradas maliciosas o malformadas (es decir, no conf&#xed;e en una lista de denegaci&#xf3;n). Sin embargo, las listas de denegaci&#xf3;n pueden ser &#xfa;tiles para detectar posibles ataques o para determinar qu&#xe9; entradas est&#xe1;n tan malformadas que deben ser rechazadas directamente.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Al realizar la validaci&#xf3;n de entrada, usted debe considerar todas las propiedades potencialmente destacadas, incluida la longitud, el tipo de entrada, el rango completo de valores aceptables, las entradas faltantes o adicionales, la sintaxis, el sentido entre los campos que se encuentran relacionados y la conformidad con todas las reglas comerciales. Como ejemplo de l&#xf3;gica de regla de negocio, &quot;barco&quot; puede ser sint&#xe1;cticamente v&#xe1;lido porque s&#xf3;lo contiene caracteres alfanum&#xe9;ricos, pero no es v&#xe1;lido si se esperan colores como &quot;rojo&quot; o &quot;azul&quot;.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Aseg&#xfa;rese de realizar la validaci&#xf3;n de entradas en interfaces bien definidas dentro de la aplicaci&#xf3;n. Esto ayudar&#xe1; a cuidar la aplicaci&#xf3;n, incluso si un elemento se utiliza de nuevo o traslada a otro sitio.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;Tag name: input Att name:  Att id: &lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;http://projects.webappsec.org/Cross-Site-Scripting&lt;/p&gt;&lt;p&gt;http://cwe.mitre.org/data/definitions/79.html&lt;/p&gt;</reference>
+						<cweid>79</cweid>
+						<wascid>8</wascid>
+						<sourceid>371</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10202</pluginid>
+						<alertRef>10202</alertRef>
+						<alert>Ausencia de fichas (tokens) Anti-CSRF</alert>
+						<name>Ausencia de fichas (tokens) Anti-CSRF</name>
+						<riskcode>2</riskcode>
+						<confidence>1</confidence>
+						<riskdesc>Medio (Baja)</riskdesc>
+						<confidencedesc>Baja</confidencedesc>
+						<desc>&lt;p&gt;No se encontraron fichas (tokens) Anti-CSRF en un formulario HTML.&lt;/p&gt;&lt;p&gt;Una solicutud falsa entre sitios en un ataque que compromete y obliga a una v&#xed;ctima a enviar su solicitud HTTP a un destino objetivo sin su conocimiento o intenci&#xf3;n para poder realizar una acci&#xf3;n como v&#xed;ctima. La causa oculta es la funcionalidad de la aplicaci&#xf3;n utilizando acciones de URL/formulario que pueden ser adivinados de forma repetible. La naturaleza del ataque es que CSRG explota la confianza que un sitio web proporciona a un usuario. Por el contrario, las cadenas de comandos de los sitios cruzados (XSS) explotan la confianza que un usuario proporciona en un sitio web. Al igual que XSS, los ataques CSRG no son de forma necesaria de sitios cruzados, pero hay la posibilidad de que si pueden serlo. La falsificaci&#xf3;n de las solicitudes ente los sitios tambi&#xe9;n se conoce como CSRF, XSRG, ataques con un solo clic, montaje de sesi&#xf3;n, diputado confundido y navegaci&#xf3;n en alta mar.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Los ataques de CSRG son muy efectivos en varias situaciones, que incluyen:&lt;/p&gt;&lt;p&gt;*La victima tiene una sesi&#xf3;n activa en el sitio de destino.&lt;/p&gt;&lt;p&gt;    *La v&#xed;ctima se autoriza por medio de la autenticaci&#xf3;n HTTP en el sitio de destino.&lt;/p&gt;&lt;p&gt;    *La v&#xed;ctima se encuentra en la misma red local que el sitio de destino.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;CSRF se ha utilizado especialmente para poder realizar una acci&#xf3;n contra un sitio objetivo utilizando los privilegios de la v&#xed;ctima, pero se han revelado t&#xe9;cnicas recientes para difundir informaci&#xf3;n al obtener el acceso a la respuesta. El riesgo de divulgaci&#xf3;n de informaci&#xf3;n aumenta de forma dr&#xe1;stica cuando el sitio de destino se encuentra vulnerable a XSS, porque XSS se puede utilizar como una plataforma para CSRF, lo que le permite al atacante que opere desde adentro de los l&#xed;ites de la misma pol&#xed;tica de origen.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://altoromutual.com:8080/</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>&lt;form id=&quot;frmSearch&quot; method=&quot;get&quot; action=&quot;/search.jsp&quot;&gt;</evidence>
+									<otherinfo>Ninguna ficha (token) Anti-CSRF [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] fue encontrada en los siguientes formularios HTML: [Form 1: &quot;query&quot; ].  </otherinfo>
+								</instance>
+							
+						</instances>
+						<count>1</count>
+						<solution>&lt;p&gt;Fase: Arquitectura y Dise&#xf1;o&lt;/p&gt;&lt;p&gt;Utilizar una biblioteca o framework verificado y confiable que evite esta vulnerabilidad o proporcione elementos que faciliten evitarla.&lt;/p&gt;&lt;p&gt;Por ejemplo, utilice el paquete anti-CSRG como el CSRGuard de OWASP.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Fase: Implementaci&#xf3;n&lt;/p&gt;&lt;p&gt;Aseg&#xfa;rese de que su aplicaci&#xf3;n est&#xe9; libre de fallas de secuencias de comandos entre sitios, ya que la mayor&#xed;a de las defensas de CSRF pueden detenerse por alto por medio del uso de secuencias de comandos manejadas por el atacante.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Fase: Arquitectura y Dise&#xf1;o&lt;/p&gt;&lt;p&gt;Origina un nonce &#xfa;nico para cada uno de los formularios, coloque el nonce en el formularo y confirme la independencia al obtener el formulario. Aseg&#xfa;rese de que el nonce no sea predecible (CWE-330).&lt;/p&gt;&lt;p&gt;Usted tiene que tener en cuenta que esto puede pasar desapercibido utilizando XSS.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Identificar las operaciones que sean especialmente peligrosas. Cuando el usuario desarrolla una operaci&#xf3;n peligrosa, env&#xed;e una solicitud de confirmaci&#xf3;n de forma separada para poder garantizar que el usuario tenga la intenci&#xf3;n de desarrollar esa operaci&#xf3;n.&lt;/p&gt;&lt;p&gt;Usted tiene que tener en cuenta que esto puede pasar desapercibido utilizando XSS.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Utilice el control de gesti&#xf3;n de la sesi&#xf3;n de ESAPI.&lt;/p&gt;&lt;p&gt;Este control introduce un elemento para CSRF.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;No utilice el m&#xe9;todo GET para ninguna de las solicitudes que puedan desencadenar un cambio de estado.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Fase: Implementaci&#xf3;n&lt;/p&gt;&lt;p&gt;Revise que la solicitud se cre&#xf3; en la p&#xe1;gina esperada. Esto podr&#xed;a quebrar la funcionalidad aut&#xe9;ntica, ya que los usuarios o los representantes puede ser que hayan desactivado el env&#xed;o de Referer por motivos de privacidad.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;Ninguna ficha (token) Anti-CSRF [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] fue encontrada en los siguientes formularios HTML: [Form 1: &quot;query&quot; ].  &lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;http://projects.webappsec.org/Cross-Site-Request-Forgery&lt;/p&gt;&lt;p&gt;http://cwe.mitre.org/data/definitions/352.html&lt;/p&gt;</reference>
+						<cweid>352</cweid>
+						<wascid>9</wascid>
+						<sourceid>279</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10038</pluginid>
+						<alertRef>10038-1</alertRef>
+						<alert>Cabecera Content Security Policy (CSP) no configurada</alert>
+						<name>Cabecera Content Security Policy (CSP) no configurada</name>
+						<riskcode>2</riskcode>
+						<confidence>3</confidence>
+						<riskdesc>Medio (Alta)</riskdesc>
+						<confidencedesc>Alta</confidencedesc>
+						<desc>&lt;p&gt;La Pol&#xed;tica de seguridad de contenido (CSP) es una capa adicional de seguridad que ayuda a detectar y mitigar ciertos tipos de ataques, incluidos Cross Site Scripting (XSS) y ataques de inyecci&#xf3;n de datos. Estos ataques se utilizan para todo, desde el robo de datos hasta la desfiguraci&#xf3;n del sitio o la distribuci&#xf3;n de malware. CSP proporciona un conjunto de encabezados HTTP est&#xe1;ndar que permiten a los propietarios de sitios web declarar fuentes de contenido aprobadas que los navegadores deber&#xed;an poder cargar en esa p&#xe1;gina; los tipos cubiertos son JavaScript, CSS, marcos HTML, fuentes, im&#xe1;genes y objetos incrustados como applets de Java, ActiveX, archivos de audio y video.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://altoromutual.com:8080/</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>1</count>
+						<solution>&lt;p&gt;Aseg&#xfa;rese de que su servidor web, servidor de aplicaciones, balanceador de carga, etc. est&#xe9; configurado para establecer la cabecera Content-Security-Policy.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy&lt;/p&gt;&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html&lt;/p&gt;&lt;p&gt;http://www.w3.org/TR/CSP/&lt;/p&gt;&lt;p&gt;http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html&lt;/p&gt;&lt;p&gt;http://www.html5rocks.com/en/tutorials/security/content-security-policy/&lt;/p&gt;&lt;p&gt;http://caniuse.com/#feat=contentsecuritypolicy&lt;/p&gt;&lt;p&gt;http://content-security-policy.com/&lt;/p&gt;</reference>
+						<cweid>693</cweid>
+						<wascid>15</wascid>
+						<sourceid>279</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10020</pluginid>
+						<alertRef>10020-1</alertRef>
+						<alert>Falta de cabecera Anti-Clickjacking</alert>
+						<name>Falta de cabecera Anti-Clickjacking</name>
+						<riskcode>2</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Medio (Media)</riskdesc>
+						<confidencedesc>Media</confidencedesc>
+						<desc>&lt;p&gt;La respuesta no incluye Content-Security-Policy con la directiva &apos;frame-ancestors&apos; ni X-Frame-Options para proteger contra ataques de &apos;ClickJacking&apos;.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://altoromutual.com:8080/</uri>
+									<method>GET</method>
+									<param>x-frame-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>1</count>
+						<solution>&lt;p&gt;Los navegadores web modernos admiten los encabezados HTTP Content-Security-Policy y X-Frame-Options. Aseg&#xfa;rese de que uno de ellos est&#xe9; configurado en todas las p&#xe1;ginas web devueltas por su sitio/aplicaci&#xf3;n.&lt;/p&gt;&lt;p&gt;Si espera que la p&#xe1;gina est&#xe9; enmarcada solo por p&#xe1;ginas en su servidor (por ejemplo, es parte de un FRAMESET), querr&#xe1; usar SAMEORIGIN; de lo contrario, si nunca espera que la p&#xe1;gina est&#xe9; enmarcada, debe usar DENY. Alternativamente, considere implementar la directiva &quot;frame-ancestros&quot; de la pol&#xed;tica de seguridad de contenido.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options&lt;/p&gt;</reference>
+						<cweid>1021</cweid>
+						<wascid>15</wascid>
+						<sourceid>279</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10036</pluginid>
+						<alertRef>10036</alertRef>
+						<alert>Server Leaks Version Information via &quot;Server&quot; HTTP Response Header Field</alert>
+						<name>Server Leaks Version Information via &quot;Server&quot; HTTP Response Header Field</name>
+						<riskcode>1</riskcode>
+						<confidence>3</confidence>
+						<riskdesc>Bajo (Alta)</riskdesc>
+						<confidencedesc>Alta</confidencedesc>
+						<desc>&lt;p&gt;The web/application server is leaking version information via the &quot;Server&quot; HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://altoromutual.com:8080/</uri>
+									<method>GET</method>
+									<param></param>
+									<attack></attack>
+									<evidence>Apache-Coyote/1.1</evidence>
+									<otherinfo></otherinfo>
+								</instance>
+							
+						</instances>
+						<count>1</count>
+						<solution>&lt;p&gt;Ensure that your web server, application server, load balancer, etc. is configured to suppress the &quot;Server&quot; header or provide generic details.&lt;/p&gt;</solution>
+						<otherinfo></otherinfo>
+						<reference>&lt;p&gt;http://httpd.apache.org/docs/current/mod/core.html#servertokens&lt;/p&gt;&lt;p&gt;http://msdn.microsoft.com/en-us/library/ff648552.aspx#ht_urlscan_007&lt;/p&gt;&lt;p&gt;http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx&lt;/p&gt;&lt;p&gt;http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html&lt;/p&gt;</reference>
+						<cweid>200</cweid>
+						<wascid>13</wascid>
+						<sourceid>279</sourceid>
+					</alertitem>
+				
+				
+					<alertitem>
+						<pluginid>10021</pluginid>
+						<alertRef>10021</alertRef>
+						<alert>X-Content-Type-Options Header Missing</alert>
+						<name>X-Content-Type-Options Header Missing</name>
+						<riskcode>1</riskcode>
+						<confidence>2</confidence>
+						<riskdesc>Bajo (Media)</riskdesc>
+						<confidencedesc>Media</confidencedesc>
+						<desc>&lt;p&gt;The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &apos;nosniff&apos;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.&lt;/p&gt;</desc>
+						<instances>
+							
+								<instance>
+									<uri>http://altoromutual.com:8080/</uri>
+									<method>GET</method>
+									<param>x-content-type-options</param>
+									<attack></attack>
+									<evidence></evidence>
+									<otherinfo>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</otherinfo>
+								</instance>
+							
+						</instances>
+						<count>1</count>
+						<solution>&lt;p&gt;Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &apos;nosniff&apos; for all web pages.&lt;/p&gt;&lt;p&gt;If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.&lt;/p&gt;</solution>
+						<otherinfo>&lt;p&gt;This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.&lt;/p&gt;&lt;p&gt;At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.&lt;/p&gt;</otherinfo>
+						<reference>&lt;p&gt;http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx&lt;/p&gt;&lt;p&gt;https://owasp.org/www-community/Security_Headers&lt;/p&gt;</reference>
+						<cweid>693</cweid>
+						<wascid>15</wascid>
+						<sourceid>279</sourceid>
+					</alertitem>
+				
+			</alerts>
+		</site>
+	
+</OWASPZAPReport>
