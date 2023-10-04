@@ -1,0 +1,20 @@
+# Copyright (c) 2019-2020 VMware, Inc. All Rights Reserved.
+# SPDX-License-Identifier: BSD-2-Clause
+#
+# This file is used by pip-tools for release management
+#
+# Please only add direct dependencies here, i.e., do not update with the
+# output of `pip freeze`.
+
+PyYAML
+docker
+requests
+stevedore
+pbr
+dockerfile-parse
+debian-inspector
+regex
+GitPython
+prettytable
+packageurl-python
+license-expression
